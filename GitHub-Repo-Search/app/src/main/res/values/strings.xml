@@ -1,0 +1,9 @@
+
+<resources>
+    <string name="app_name">Github Query</string>
+    <string name="enter_a_query">Enter a query</string>
+    <string name="result_will_shown_here">Url show here</string>
+    <string name="make_search">Result Will Shown Here!</string>
+    <string name="search">search</string>
+    <string name="failed_to_fetch_data_from_internet">Failed to Fetch Data From Internet</string>
+</resources>
