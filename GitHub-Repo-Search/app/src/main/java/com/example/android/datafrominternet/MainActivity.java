@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     private  TextView mErrorMsg;
 
+    private final static String RESULT = "result";
+    private final static String URL = "url";
+
     private ProgressBar mProgressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
         mErrorMsg = findViewById(R.id.tv_error_message_display);
 
         mProgressBar = findViewById(R.id.pb_loading_indicator);
+
+
+        if(savedInstanceState != null){
+            if(savedInstanceState.containsKey(RESULT)){
+                mSearchResultsTextView.setText(savedInstanceState.getString(RESULT));
+            }
+
+            if(savedInstanceState.containsKey(URL)){
+                mUrlDisplayTextView.setText(savedInstanceState.getString(URL));
+            }
+        }
     }
     void makeGithubSearchQuery(){
         if(!(mSearchBoxEditText.getText().toString().equals(""))){
@@ -118,6 +132,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String res = mSearchResultsTextView.getText().toString();
+        String url = mUrlDisplayTextView.getText().toString();
+        outState.putString(RESULT,res);
+        outState.putString(URL,url);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
