@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">persist</string>
+    <string name="reset_log">Reset Log</string>
+</resources>
