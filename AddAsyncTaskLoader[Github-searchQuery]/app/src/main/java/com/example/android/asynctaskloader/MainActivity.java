@@ -129,13 +129,21 @@ public class MainActivity extends AppCompatActivity
     public Loader<String> onCreateLoader(int id, @Nullable final Bundle args) {
         return new AsyncTaskLoader<String>(this) {
 
+            String mGithubJson;
+
             @Override
             protected void onStartLoading() {
                 if(args == null){
                     return;
                 }
-                mLoadingIndicator.setVisibility(View.VISIBLE);
-                forceLoad();
+
+                if(mGithubJson != null){
+                    deliverResult(mGithubJson);
+                }else {
+                    mLoadingIndicator.setVisibility(View.VISIBLE);
+                    forceLoad();
+                }
+
             }
 
             @Nullable
@@ -157,6 +165,11 @@ public class MainActivity extends AppCompatActivity
                     e.printStackTrace();
                     return null;
                 }
+            }
+            @Override
+            public void deliverResult(String githubJson) {
+                mGithubJson = githubJson;
+                super.deliverResult(githubJson);
             }
 
         };
