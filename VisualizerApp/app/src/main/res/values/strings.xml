@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Visualize</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- - - - - - - - - - - - - - - -
+          - Used by Preferences  -
+          - - - - - - - - - - - - - - - -->
+
+    <string name="pref_show_bass_label">Show Bass</string>
+    <string name="pref_show_bass_key" translatable="false">show_bass</string>
+
+    <string name="pref_show_mid_range_label">Show Mid Range</string>
+    <string name="pref_show_mid_range_key" translatable="false">show_mid_range</string>
+
+    <string name="pref_show_treble_label">Show Treble</string>
+    <string name="pref_show_treble_key" translatable="false">show_treble</string>
+
+    <string name="pref_show_true">Shown</string>
+    <string name="pref_show_false">Hidden</string>
+
+
+    <string name="pref_size_label">Size Multiplier</string>
+    <string name="pref_size_key" translatable="false">size</string>
+    <string name="pref_size_default" translatable="false">1</string>
+
+
+
+    <string name="pref_color_label">Shape Color</string>
+
+    <string name="pref_color_label_red">Red</string>
+    <string name="pref_color_label_blue">Blue</string>
+    <string name="pref_color_label_green">Green</string>
+
+    <string name="pref_color_key" translatable="false">color</string>
+
+
+    <!-- Value in SharedPreferences for red color option -->
+    <string name="pref_color_red_value" translatable="false">red</string>
+
+    <!-- Value in SharedPreferences for blue color option -->
+    <string name="pref_color_blue_value" translatable="false">blue</string>
+
+    <!-- Value in SharedPreferences for green color option -->
+    <string name="pref_color_green_value" translatable="false">green</string>
+
+</resources>
